@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			#phone.active {
+				stroke: #000;
+				stroke-width: 0;
+				animation-duration: 4s;
+				animation-name: vibrate;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes vibrate {
+			  0% { transform: translateX(0) rotate(0);}
+			  1% { transform: translateX(1px) rotate(1deg);}
+			  3% { transform: translateX(0) rotate(-1deg);}
+			  5% { transform: translateX(1px) rotate(1deg);}
+			  7% { transform: translateX(0) rotate(-1deg);}
+			  9% { transform: translateX(1px) rotate(1deg);}
+			  11% { transform: translateX(0) rotate(-1deg);}
+			  13% { transform: translateX(1px) rotate(1deg);}
+			  15% { transform: translateX(0) rotate(-1deg);}
+			  17% { transform: translateX(1px) rotate(1deg);}
+			  19% { transform: translateX(0) rotate(-1deg);}
+			  21% { transform: translateX(1px) rotate(1deg);}
+			  23% { transform: translateX(0) rotate(-1deg);}
+			  24% { transform: translateX(0) rotate(0);}
+			  100% { transform: translateX(0) rotate(0);}
+			}
+
+			#phone.active > g > path:nth-child(2) {
+				animation-duration: 4s;
+				animation-name: highlight;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes highlight {
+			  1% { stroke-width: 0.8;}
+			  23% { stroke-width: 0.8;}
+			  24% { stroke-width: 0;}
+			}
+		</style>
+	</head>
+	<body>
+		<svg id="phone" class="active" width="34" height="34" viewBox="0 0 34 34">
+			<g>
+				<path d="M22 5c1.103 0 2 .897 2 2v20c0 1.103-.897 2-2 2h-9c-1.103 0-2-.897-2-2V7c0-1.103.897-2 2-2h9m0-1h-9a3 3 0 0 0-3 3v20a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3"></path>
+				<path d="M13 8h9v15h-9V8zm9-1h-9a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM16 26h3v1h-3v-1z"></path>
+			</g>
+		</svg>
+	</body>
+</html>
